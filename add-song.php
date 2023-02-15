@@ -25,7 +25,16 @@
             <fieldset>
                 <label for="genre">Genre: *</label>
                 <select name="genre" id="genre">
-                    
+                    <?php
+                        $db=new PDO('mysql:host=172.31.22.43;dbname=Spencer1178551','Spencer1178551','ST3BJVqAAF');
+                        $sql="SELECT * from genre";
+                        $cmd=$db->prepare($sql);
+                        $cmd->execute();
+                        $genres=$cmd->fetchAll();
+                        foreach($genres as $genre){
+                            echo'<option value ="' . $genre["genreId"].'">'.$genre['genre'].'</option>' ;
+                        }
+                    ?>
                 </select>
             </fieldset>
         </form>

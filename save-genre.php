@@ -14,7 +14,7 @@
         //connect to the database
         $db=new PDO('mysql:host=172.31.22.43;dbname=Spencer1178551','Spencer1178551','ST3BJVqAAF');
         //set up SQL statement
-        $sql="INSERT INTO genre (genre) VALUES(:status)";
+        $sql="INSERT INTO genre (genre) VALUES(:genre)";
         //input new genre into SQL statement
         $cmd=$db->prepare($sql);
         $cmd->bindParam(':genre',$genre,PDO::PARAM_STR,25);
