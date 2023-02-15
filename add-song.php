@@ -7,6 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <main>
+        <h1>Add Song</h1>
+        <form action="saved.php" method="post">
+            <fieldset>
+                <label for="name">Song Name: *</label>
+                <textarea name="name" id="name" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="artist">Artist: *</label>
+                <textarea name="artist" id="artist" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="year">Release Year: *</label>
+                <textarea name="year" id="year" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="genre">Genre: *</label>
+                <select name="genre" id="genre">
+                    
+                </select>
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
