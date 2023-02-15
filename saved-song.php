@@ -31,7 +31,7 @@
         if (empty($year)) {
             echo '<p>Song year is required</p>';
             $ok = false;
-        } else if (!is_numeric($year) && $year < date("Y")) {
+        } else if (!is_numeric($year)) {
             echo '<p>Song year should be a number</p>';
             $ok = false;
         }
