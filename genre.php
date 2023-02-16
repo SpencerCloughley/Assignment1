@@ -7,6 +7,7 @@
     <title>Add Genre</title>
 </head>
 <body>
+    <!-- Basic Website to add genres to database-->
     <form action="saved-genre.php" method="post">
         <fieldset>
             <label for="genre">Genre: </label>

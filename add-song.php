@@ -9,7 +9,10 @@
 <body>
     <main>
         <h1>Add Song</h1>
+        <a href="songlist.php">See List</a>
         <form action="saved-song.php" method="post">
+            <!--All fieldsets are required as they are all needed to correctly add a song -->
+            <!-- Two text area for song name and artist-->
             <fieldset>
                 <label for="name">Song Name: *</label>
                 <textarea name="name" id="name" required></textarea>
@@ -20,8 +23,10 @@
             </fieldset>
             <fieldset>
                 <label for="year">Release Year: *</label>
-                <textarea name="year" id="year" required></textarea>
+                <!--Input year of release set to between 1000 - 2099 -->
+                <input type="number" name="year" id="year" min="1000" max="2099" value="2000" required/>
             </fieldset>
+            <!-- Genre list populated from the genre table in the database-->
             <fieldset>
                 <label for="genreId">Genre: *</label>
                 <select name="genreId" id="genre">
@@ -39,6 +44,7 @@
             </fieldset>
             <button>Save</button>
         </form>
+        
     </main>
 </body>
 </html>

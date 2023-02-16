@@ -12,6 +12,7 @@
         <a href="add-song.php">Add a new Song</a>
 
         <?php
+        //connect to the database and run the validated sql command
         $db=new PDO('mysql:host=172.31.22.43;dbname=Spencer1178551','Spencer1178551','ST3BJVqAAF');
         $sql="SELECT * FROM songs INNER JOIN genre on songs.genreId=genre.genreId";
         $cmd = $db->prepare($sql);

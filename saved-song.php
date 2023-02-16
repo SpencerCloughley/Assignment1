@@ -12,6 +12,7 @@
     <section>
         <?php
         $ok = true;
+        //all variables sent over by the previous form
         $name = $_POST['name'];
         $artist = $_POST['artist'];
         $year = $_POST['year'];
